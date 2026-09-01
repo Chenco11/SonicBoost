@@ -52,10 +52,7 @@ dependencies:
   ionicons: ^0.2.2
   jni: ^0.14.0
   just_audio: ^0.9.46
-  just_audio_media_kit:
-    git:
-      url: https://github.com/anandnet/just_audio_media_kit.git
-      ref: 6672eb82657d9e671abbf42122031c88aa9e6d80
+  just_audio_media_kit: ^2.1.0
   palette_generator: ^0.3.3+4
   path: ^1.8.3
   path_provider: ^2.1.1
