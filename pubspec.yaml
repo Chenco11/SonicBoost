@@ -29,7 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animations: ^2.0.11
-  app_links: ^3.5.1
+  app_links: ^7.0.0
   archive: ^3.1.6
   audio_service: ^0.18.17
   audio_service_mpris: ^0.1.5
@@ -45,17 +45,14 @@ dependencies:
   flutter_lyric: ^2.0.4+6
   flutter_slidable: ^3.1.2
   get: ^4.7.1
-  google_fonts: ^6.1.0
+  google_fonts: ^6.3.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   html: ^0.15.6
-  ionicons: ^0.2.2
+  ionicons_plus: ^0.2.5
   jni: ^0.14.0
-  just_audio: ^0.9.46
-  just_audio_media_kit:
-    git:
-      url: https://github.com/anandnet/just_audio_media_kit.git
-      ref: 6672eb82657d9e671abbf42122031c88aa9e6d80
+  just_audio: ^0.10.5
+  just_audio_media_kit: ^2.1.0
   palette_generator: ^0.3.3+4
   path: ^1.8.3
   path_provider: ^2.1.1
@@ -81,9 +78,7 @@ dependencies:
   widget_marquee: ^0.0.8
   window_manager: ^0.4.2
   youtube_explode_dart:
-    git:
-      url: https://github.com/anandnet/youtube_explode_dart.git
-      ref: 1d9ec9baa806705b1d859260eeb389ec28c6b024
+    path: packages/youtube_explode_dart
 dev_dependencies:
 
   # The "flutter_lints" package below contains a set of recommended lints to
