@@ -13,6 +13,19 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
+// Algunos plugins publican su modulo Android con un compileSdkVersion fijo
+// desactualizado (30/31/33), independiente del compileSdk de la app. Se
+// fuerza aqui para evitar errores de "AAR metadata" al compilar.
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                compileSdkVersion 36
+            }
+        }
+    }
+}
+
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
