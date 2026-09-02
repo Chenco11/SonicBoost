@@ -9,13 +9,11 @@ rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
-subprojects {
-    project.evaluationDependsOn(':app')
-}
 
 // Algunos plugins publican su modulo Android con un compileSdkVersion fijo
 // desactualizado (30/31/33), independiente del compileSdk de la app. Se
-// fuerza aqui para evitar errores de "AAR metadata" al compilar.
+// fuerza aqui para evitar errores de "AAR metadata" al compilar. Debe ir
+// antes de evaluationDependsOn, que fuerza la evaluacion temprana de :app.
 subprojects {
     afterEvaluate { project ->
         if (project.hasProperty('android')) {
@@ -24,6 +22,10 @@ subprojects {
             }
         }
     }
+}
+
+subprojects {
+    project.evaluationDependsOn(':app')
 }
 
 tasks.register("clean", Delete) {
